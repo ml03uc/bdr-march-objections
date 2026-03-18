@@ -58,7 +58,6 @@
   .hero h1 { font-size: 28px; font-weight: 700; line-height: 1.3; margin-bottom: 12px; }
   .hero p { font-size: 15px; color: rgba(255,255,255,0.75); line-height: 1.6; max-width: 560px; }
   .hero-meta { display: flex; gap: 24px; margin-top: 24px; }
-  .hero-stat { }
   .hero-stat-n { font-size: 28px; font-weight: 700; color: var(--teal); }
   .hero-stat-l { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 2px; }
 
@@ -99,9 +98,6 @@
 
   /* QUIZ */
   .quiz-q { font-size: 17px; font-weight: 600; color: var(--navy); line-height: 1.5; margin-bottom: 20px; }
-  .quiz-context { background: var(--gray); border-radius: 10px; padding: 14px 18px; margin-bottom: 20px; }
-  .quiz-context-label { font-size: 11px; font-weight: 700; color: var(--mid); letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 6px; }
-  .quiz-context p { font-size: 14px; color: var(--navy); font-style: italic; line-height: 1.5; }
   .options { display: flex; flex-direction: column; gap: 10px; }
   .option { border: 2px solid var(--border); border-radius: 10px; padding: 14px 18px; cursor: pointer; font-size: 15px; color: var(--navy); transition: all 0.2s; background: white; text-align: left; line-height: 1.5; }
   .option:hover:not(:disabled) { border-color: var(--teal); background: var(--teal-light); }
@@ -118,18 +114,6 @@
   .feedback.correct-fb p { color: #166534; }
   .feedback.wrong-fb p { color: #991B1B; }
 
-  /* CALCULATOR */
-  .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
-  .calc-field label { display: block; font-size: 12px; font-weight: 600; color: var(--mid); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
-  .calc-field input, .calc-field select { width: 100%; border: 2px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 15px; color: var(--navy); outline: none; transition: border-color 0.2s; background: white; }
-  .calc-field input:focus, .calc-field select:focus { border-color: var(--teal); }
-  .calc-result { background: var(--navy); border-radius: 12px; padding: 24px; color: white; }
-  .calc-result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
-  .calc-result-item { text-align: center; }
-  .calc-result-n { font-size: 26px; font-weight: 700; color: var(--teal); }
-  .calc-result-l { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 4px; }
-  .calc-result h3 { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.8); }
-
   /* FLASHCARDS */
   .flashcard-wrap { perspective: 1000px; height: 220px; cursor: pointer; margin-bottom: 12px; }
   .flashcard { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.5s; }
@@ -143,17 +127,7 @@
   .fc-text { font-size: 16px; line-height: 1.6; font-weight: 500; }
   .flashcard-front .fc-text { color: var(--navy); }
   .flashcard-back .fc-text { color: white; }
-  .fc-hint { font-size: 12px; color: var(--mid); margin-top: 12px; text-align: center; }
-  .fc-nav { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; }
-  .fc-counter { font-size: 13px; color: var(--mid); font-weight: 500; }
-
-  /* AUDIT CHECKLIST */
-  .checklist { list-style: none; margin: 12px 0; }
-  .checklist li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 14px; color: var(--navy); line-height: 1.5; }
-  .checklist li:last-child { border-bottom: none; }
-  .check-box { width: 20px; height: 20px; border: 2px solid var(--border); border-radius: 4px; cursor: pointer; flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: all 0.2s; margin-top: 1px; }
-  .check-box.checked { background: var(--teal); border-color: var(--teal); }
-  .check-box.checked::after { content: '✓'; color: white; font-size: 12px; font-weight: 700; }
+  .fc-hint { font-size: 12px; color: var(--teal); margin-top: auto; }
 
   /* BUTTONS */
   .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer; border: none; transition: all 0.2s; }
@@ -172,32 +146,25 @@
   .score-ring-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
   .score-n { font-size: 28px; font-weight: 700; color: var(--navy); }
   .score-l { font-size: 11px; color: var(--mid); }
-  .score-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 20px 0; }
+  .score-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
   .score-item { background: var(--gray); border-radius: 10px; padding: 16px; text-align: center; }
   .score-item-n { font-size: 22px; font-weight: 700; }
   .score-item-l { font-size: 12px; color: var(--mid); margin-top: 4px; }
 
-  /* COMPETIOR TAG */
+  /* STEP INDICATOR */
+  .step-list { display: flex; gap: 0; margin-bottom: 28px; overflow: hidden; border-radius: 8px; }
+  .step-item { flex: 1; padding: 10px; text-align: center; font-size: 12px; font-weight: 600; background: var(--border); color: var(--mid); transition: all 0.3s; }
+  .step-item.done { background: var(--teal-light); color: var(--teal-dark); }
+  .step-item.current { background: var(--teal); color: white; }
+
+  /* COMPETITOR */
   .competitor-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
   .competitor-card { background: var(--gray); border-radius: 10px; padding: 16px; border-left: 3px solid var(--teal); }
   .competitor-name { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
   .competitor-note { font-size: 13px; color: var(--mid); line-height: 1.5; }
 
-  /* STEP INDICATOR */
-  .step-list { display: flex; gap: 0; margin-bottom: 28px; overflow: hidden; border-radius: 8px; }
-  .step-item { flex: 1; padding: 10px; text-align: center; font-size: 12px; font-weight: 600; background: var(--border); color: var(--mid); transition: all 0.3s; position: relative; }
-  .step-item.done { background: var(--teal-light); color: var(--teal-dark); }
-  .step-item.current { background: var(--teal); color: white; }
-
-  /* TAGS */
-  .tag { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; }
-  .tag-teal { background: var(--teal-light); color: var(--teal-dark); }
-  .tag-red { background: #FEF2F2; color: var(--red); }
-
   @media (max-width: 600px) {
     .do-dont { grid-template-columns: 1fr; }
-    .calc-grid { grid-template-columns: 1fr; }
-    .calc-result-grid { grid-template-columns: 1fr 1fr; }
     .competitor-row { grid-template-columns: 1fr; }
     .hero h1 { font-size: 22px; }
     .hero-meta { gap: 16px; }
@@ -229,9 +196,9 @@
       <h1>"I don't know what I'm<br>paying in fees."</h1>
       <p>This module trains you to handle the fee unawareness objection, pivot away from the savings pitch, and offer a free fee audit as the next step.</p>
       <div class="hero-meta">
-        <div class="hero-stat"><div class="hero-stat-n">5</div><div class="hero-stat-l">Modules</div></div>
-        <div class="hero-stat"><div class="hero-stat-n">~12</div><div class="hero-stat-l">Minutes</div></div>
-        <div class="hero-stat"><div class="hero-stat-n">8</div><div class="hero-stat-l">Quiz questions</div></div>
+        <div class="hero-stat"><div class="hero-stat-n">4</div><div class="hero-stat-l">Modules</div></div>
+        <div class="hero-stat"><div class="hero-stat-n">~8</div><div class="hero-stat-l">Minutes</div></div>
+        <div class="hero-stat"><div class="hero-stat-n">7</div><div class="hero-stat-l">Quiz questions</div></div>
       </div>
     </div>
 
@@ -242,9 +209,8 @@
       <div class="step-list">
         <div class="step-item current">1 Root Cause</div>
         <div class="step-item">2 The Script</div>
-        <div class="step-item">3 Fee Audit</div>
-        <div class="step-item">4 Variations</div>
-        <div class="step-item">5 Quiz</div>
+        <div class="step-item">3 Variations</div>
+        <div class="step-item">4 Quiz</div>
       </div>
       <div class="btn-row">
         <button class="btn btn-primary" onclick="goTo(1)">Start Module →</button>
@@ -254,8 +220,8 @@
 
   <!-- MODULE 1: ROOT CAUSE -->
   <div class="module" id="mod-1">
-    <div class="section-label">Module 1 of 5 — Root Cause</div>
-    <div class="progress-bar"><div class="progress-fill" style="width:20%"></div></div>
+    <div class="section-label">Module 1 of 4 — Root Cause</div>
+    <div class="progress-bar"><div class="progress-fill" style="width:25%"></div></div>
 
     <div class="card">
       <div class="card-title">Why this objection happens</div>
@@ -273,7 +239,7 @@
       </div>
 
       <h3 style="font-size:16px;font-weight:700;margin:24px 0 12px;color:var(--navy)">The right frame</h3>
-      <p style="font-size:14px;color:var(--mid);line-height:1.7">Stop selling savings. Start offering <strong>clarity</strong>. The prospect cannot make a buying decision without a number. Your job is to help them get that number first, before any comparison to AP's pricing.</p>
+      <p style="font-size:14px;color:var(--mid);line-height:1.7">Stop selling savings. Start offering <strong>clarity</strong>. The prospect cannot make a buying decision without a number. Your job on the call is to pivot to a free fee audit as the next step — you will run the audit separately, not during the call.</p>
 
       <div class="do-dont" style="margin-top:20px">
         <div class="dont-box">
@@ -300,7 +266,7 @@
         <div class="quiz-q">A prospect says: "We've had the same processor for years, I honestly don't know what we pay." What's your first move?</div>
         <div class="options" id="q1-opts">
           <button class="option" onclick="answer('q1',0,false)">Launch into the AP savings pitch — this is an opening.</button>
-          <button class="option" onclick="answer('q1',1,true)">Validate the objection, then offer a free fee audit as the next step instead of a demo.</button>
+          <button class="option" onclick="answer('q1',1,true)">Normalize the objection and pivot the CTA — offer to help them get a clear picture of what they're currently paying, with a specific follow-up outside this call.</button>
           <button class="option" onclick="answer('q1',2,false)">Ask them to get their accountant on the call before continuing.</button>
           <button class="option" onclick="answer('q1',3,false)">Schedule a full demo so they can see the product and judge value themselves.</button>
         </div>
@@ -316,8 +282,8 @@
 
   <!-- MODULE 2: THE SCRIPT -->
   <div class="module" id="mod-2">
-    <div class="section-label">Module 2 of 5 — The Script</div>
-    <div class="progress-bar"><div class="progress-fill" style="width:40%"></div></div>
+    <div class="section-label">Module 2 of 4 — The Script</div>
+    <div class="progress-bar"><div class="progress-fill" style="width:50%"></div></div>
 
     <div class="card">
       <div class="card-title">Word-for-word script</div>
@@ -350,15 +316,15 @@
       <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:20px">
         <div style="display:flex;gap:12px;align-items:flex-start">
           <div style="background:var(--teal);color:white;border-radius:6px;padding:2px 10px;font-size:12px;font-weight:700;white-space:nowrap;margin-top:2px">Line 1</div>
-          <div style="font-size:14px;color:var(--mid);line-height:1.6">Normalizes the situation. The prospect stops feeling embarrassed or behind. Removes defensiveness.</div>
+          <div style="font-size:14px;color:var(--mid);line-height:1.6">Normalizes the situation. The prospect stops feeling embarrassed or behind. Removes defensiveness before the pivot.</div>
         </div>
         <div style="display:flex;gap:12px;align-items:flex-start">
           <div style="background:var(--teal);color:white;border-radius:6px;padding:2px 10px;font-size:12px;font-weight:700;white-space:nowrap;margin-top:2px">Line 2</div>
-          <div style="font-size:14px;color:var(--mid);line-height:1.6">Pivots the CTA from a demo (high-friction, requires trust) to an audit (low-friction, pure value). "No strings" removes the sales pressure explicitly.</div>
+          <div style="font-size:14px;color:var(--mid);line-height:1.6">Pivots the CTA from a demo (high-friction) to an audit (low-friction, pure value). "No strings" removes the sales pressure explicitly.</div>
         </div>
         <div style="display:flex;gap:12px;align-items:flex-start">
           <div style="background:var(--teal);color:white;border-radius:6px;padding:2px 10px;font-size:12px;font-weight:700;white-space:nowrap;margin-top:2px">Line 3</div>
-          <div style="font-size:14px;color:var(--mid);line-height:1.6">"Whether you move forward with us or not" is not a throwaway line. It signals confidence and de-risks the ask. The closed question "Does that sound useful?" gets a yes with no commitment attached.</div>
+          <div style="font-size:14px;color:var(--mid);line-height:1.6">"Whether you move forward with us or not" signals confidence and de-risks the ask. "Does that sound useful?" closes on a yes with no commitment attached.</div>
         </div>
       </div>
 
@@ -380,7 +346,7 @@
         <div class="section-label">Quick check</div>
         <div class="quiz-q">After delivering the fee audit script, the prospect says "Sure, that sounds fine." What do you do?</div>
         <div class="options" id="q3-opts">
-          <button class="option" onclick="answer('q3',0,true)">Set a next step to receive the statements and confirm a follow-up time to walk through the findings together.</button>
+          <button class="option" onclick="answer('q3',0,true)">Set a next step to receive the statements and confirm a follow-up time to walk through the findings together — off this call.</button>
           <button class="option" onclick="answer('q3',1,false)">Immediately pivot to the product demo while you have their attention.</button>
           <button class="option" onclick="answer('q3',2,false)">Send them the AP pricing page so they can start comparing.</button>
           <button class="option" onclick="answer('q3',3,false)">Ask for referrals while the conversation is warm.</button>
@@ -390,112 +356,15 @@
 
       <div class="btn-row">
         <button class="btn btn-secondary btn-sm" onclick="goTo(1)">← Back</button>
-        <button class="btn btn-primary" onclick="goTo(3)" id="q3-next" style="display:none">Next: Fee Audit →</button>
+        <button class="btn btn-primary" onclick="goTo(3)" id="q3-next" style="display:none">Next: Variations →</button>
       </div>
     </div>
   </div>
 
-  <!-- MODULE 3: FEE AUDIT -->
+  <!-- MODULE 3: VARIATIONS + FLASHCARDS (was mod-4) -->
   <div class="module" id="mod-3">
-    <div class="section-label">Module 3 of 5 — The Fee Audit</div>
-    <div class="progress-bar"><div class="progress-fill" style="width:60%"></div></div>
-
-    <div class="card">
-      <div class="card-title">Running the fee audit</div>
-      <div class="card-sub" style="margin-bottom:20px">The audit is the deliverable that earns the next conversation. Know exactly what to ask for and how to calculate the number.</div>
-
-      <h3 style="font-size:15px;font-weight:700;margin-bottom:12px;color:var(--navy)">What to request (2–3 months)</h3>
-      <ul class="checklist" id="audit-checklist">
-        <li><div class="check-box" onclick="toggleCheck(this)"></div><div><strong>Processor / merchant account statement</strong><br><span style="color:var(--mid);font-size:13px">Shows effective rate, per-transaction fees, chargeback fees. Often the largest bill.</span></div></li>
-        <li><div class="check-box" onclick="toggleCheck(this)"></div><div><strong>Gateway statement</strong><br><span style="color:var(--mid);font-size:13px">e.g., BNG Gateway, Stripe, Square, QuickBooks Payments. A separate line item most prospects don't track.</span></div></li>
-        <li><div class="check-box" onclick="toggleCheck(this)"></div><div><strong>Platform / SaaS bill</strong><br><span style="color:var(--mid);font-size:13px">e.g., ConnectBooster, FlexPoint, WisePay. The "wrapper" fee on top of processing.</span></div></li>
-        <li><div class="check-box" onclick="toggleCheck(this)"></div><div><strong>Bank transfer / ACH fees</strong><br><span style="color:var(--mid);font-size:13px">Some banks charge per-transfer fees that don't appear on the processor statement.</span></div></li>
-      </ul>
-
-      <h3 style="font-size:15px;font-weight:700;margin:24px 0 12px;color:var(--navy)">Fee Audit Calculator</h3>
-      <p style="font-size:14px;color:var(--mid);line-height:1.6;margin-bottom:16px">Use this to compute the prospect's effective rate and total blended cost from the statements they send you.</p>
-
-      <div class="calc-grid">
-        <div class="calc-field">
-          <label>Monthly Payment Volume ($)</label>
-          <input type="number" id="calcVolume" placeholder="e.g. 250000" oninput="calcFees()">
-        </div>
-        <div class="calc-field">
-          <label>Processor Fees Paid ($)</label>
-          <input type="number" id="calcProcessor" placeholder="e.g. 5500" oninput="calcFees()">
-        </div>
-        <div class="calc-field">
-          <label>Gateway Fees Paid ($)</label>
-          <input type="number" id="calcGateway" placeholder="e.g. 200" oninput="calcFees()">
-        </div>
-        <div class="calc-field">
-          <label>Platform / SaaS Fee ($)</label>
-          <input type="number" id="calcPlatform" placeholder="e.g. 299" oninput="calcFees()">
-        </div>
-      </div>
-
-      <div class="calc-result">
-        <h3>Calculated Results</h3>
-        <div class="calc-result-grid">
-          <div class="calc-result-item">
-            <div class="calc-result-n" id="calcRate">—</div>
-            <div class="calc-result-l">Effective Rate</div>
-          </div>
-          <div class="calc-result-item">
-            <div class="calc-result-n" id="calcTotal">—</div>
-            <div class="calc-result-l">Total Monthly Cost</div>
-          </div>
-          <div class="calc-result-item">
-            <div class="calc-result-n" id="calcAnnual">—</div>
-            <div class="calc-result-l">Annualized Cost</div>
-          </div>
-        </div>
-      </div>
-
-      <h3 style="font-size:15px;font-weight:700;margin:24px 0 12px;color:var(--navy)">Competitor flags during the audit</h3>
-      <div class="competitor-row">
-        <div class="competitor-card">
-          <div class="competitor-name">ConnectBooster</div>
-          <div class="competitor-note">Look for 3 separate bills: CB SaaS + BNG Gateway + Clearent processing. Prospect who thinks they pay "one fee" is almost certainly underestimating total cost.</div>
-        </div>
-        <div class="competitor-card">
-          <div class="competitor-name">WisePay</div>
-          <div class="competitor-note">Confirm if they've been hit by the Global Payments rate increase to 3.5%. Many WisePay users don't know this has passed through to their statement.</div>
-        </div>
-        <div class="competitor-card">
-          <div class="competitor-name">FlexPoint</div>
-          <div class="competitor-note">Ask about card mix. Interchange-plus means effective rate fluctuates. A prospect paying "2.5%" may actually be at 3.5%+ when clients use premium rewards cards.</div>
-        </div>
-        <div class="competitor-card">
-          <div class="competitor-name">QB Payments</div>
-          <div class="competitor-note">Charges 2.5–3.5% per transaction with no flat-rate option. No PSA integration either, which often surfaces a second pain point during the audit.</div>
-        </div>
-      </div>
-
-      <!-- QUIZ 4 -->
-      <div style="padding-top:24px;border-top:2px dashed var(--border);margin-top:24px">
-        <div class="section-label">Quick check</div>
-        <div class="quiz-q">A prospect on ConnectBooster says "I pay about $400 a month." Which statement is most likely true?</div>
-        <div class="options" id="q4-opts">
-          <button class="option" onclick="answer('q4',0,false)">$400 is probably accurate — ConnectBooster is an all-in-one platform.</button>
-          <button class="option" onclick="answer('q4',1,true)">$400 is likely just the CB SaaS fee. Gateway (BNG) and processor (Clearent) fees are separate bills they may not be counting.</button>
-          <button class="option" onclick="answer('q4',2,false)">$400 seems high — ConnectBooster is typically less expensive than that.</button>
-          <button class="option" onclick="answer('q4',3,false)">You should accept the $400 figure and use it to calculate the AP savings comparison.</button>
-        </div>
-        <div class="feedback" id="q4-fb"></div>
-      </div>
-
-      <div class="btn-row">
-        <button class="btn btn-secondary btn-sm" onclick="goTo(2)">← Back</button>
-        <button class="btn btn-primary" onclick="goTo(4)" id="q4-next" style="display:none">Next: Variations →</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODULE 4: VARIATIONS + FLASHCARDS -->
-  <div class="module" id="mod-4">
-    <div class="section-label">Module 4 of 5 — Objection Variations</div>
-    <div class="progress-bar"><div class="progress-fill" style="width:80%"></div></div>
+    <div class="section-label">Module 3 of 4 — Objection Variations</div>
+    <div class="progress-bar"><div class="progress-fill" style="width:75%"></div></div>
 
     <div class="card">
       <div class="card-title">Variation flashcards</div>
@@ -506,7 +375,7 @@
           <div class="flashcard-front">
             <div class="fc-label">Prospect says</div>
             <div class="fc-text">"We have QuickBooks Payments."</div>
-            <div class="fc-hint" style="color:var(--teal);margin-top:auto">Click to see how to route this →</div>
+            <div class="fc-hint" style="margin-top:auto">Click to see how to route this →</div>
           </div>
           <div class="flashcard-back">
             <div class="fc-label">How to route it</div>
@@ -520,11 +389,11 @@
           <div class="flashcard-front">
             <div class="fc-label">Prospect says</div>
             <div class="fc-text">"I think we pay around 2.9%."</div>
-            <div class="fc-hint" style="color:var(--teal);margin-top:auto">Click to see how to route this →</div>
+            <div class="fc-hint" style="margin-top:auto">Click to see how to route this →</div>
           </div>
           <div class="flashcard-back">
             <div class="fc-label">How to route it</div>
-            <div class="fc-text">"That may be your card rate, but are there additional gateway or platform fees on top of that?" 2.9% is almost certainly just the processor rate — not the blended total. Run the audit.</div>
+            <div class="fc-text">"That may be your card rate, but are there additional gateway or platform fees on top of that?" 2.9% is almost certainly just the processor rate — not the blended total.</div>
           </div>
         </div>
       </div>
@@ -534,7 +403,7 @@
           <div class="flashcard-front">
             <div class="fc-label">Prospect says</div>
             <div class="fc-text">"Our accountant handles all of that."</div>
-            <div class="fc-hint" style="color:var(--teal);margin-top:auto">Click to see how to route this →</div>
+            <div class="fc-hint" style="margin-top:auto">Click to see how to route this →</div>
           </div>
           <div class="flashcard-back">
             <div class="fc-label">How to route it</div>
@@ -548,7 +417,7 @@
           <div class="flashcard-front">
             <div class="fc-label">Prospect says</div>
             <div class="fc-text">"We use our bank's payment portal."</div>
-            <div class="fc-hint" style="color:var(--teal);margin-top:auto">Click to see how to route this →</div>
+            <div class="fc-hint" style="margin-top:auto">Click to see how to route this →</div>
           </div>
           <div class="flashcard-back">
             <div class="fc-label">How to route it</div>
@@ -572,27 +441,27 @@
 
       <div style="padding-top:24px;margin-top:16px;border-top:2px dashed var(--border)">
         <div class="section-label">Quick check</div>
-        <div class="quiz-q">A prospect completes the fee audit and you present findings showing they pay 3.4% blended. What's your next move?</div>
+        <div class="quiz-q">A prospect says: "I honestly don't know what we pay — maybe I should pull the statements and call you back." What do you say?</div>
         <div class="options" id="q6-opts">
-          <button class="option" onclick="answer('q6',0,false)">Immediately send them an AP pricing proposal to lock in the momentum.</button>
-          <button class="option" onclick="answer('q6',1,true)">Present the findings, let the prospect react, and follow their lead on next steps. Do not pivot to a pitch.</button>
-          <button class="option" onclick="answer('q6',2,false)">Show the audit and immediately compare AP's rate side-by-side.</button>
-          <button class="option" onclick="answer('q6',3,false)">Schedule a full demo since you now have a baseline to sell against.</button>
+          <button class="option" onclick="answer('q6',0,false)">"Sounds good — here's my number, reach out when you're ready."</button>
+          <button class="option" onclick="answer('q6',1,true)">"Let me make it easy — just forward me whatever you have and I'll put together the breakdown for you. Can we book 20 minutes for next week to go through it together?"</button>
+          <button class="option" onclick="answer('q6',2,false)">"Perfect — while you do that, let me send you our pricing page so you have something to compare against."</button>
+          <button class="option" onclick="answer('q6',3,false)">"Actually, let's just skip the numbers and I'll show you the platform instead — that's usually more useful."</button>
         </div>
         <div class="feedback" id="q6-fb"></div>
       </div>
 
       <div class="btn-row">
-        <button class="btn btn-secondary btn-sm" onclick="goTo(3)">← Back</button>
-        <button class="btn btn-primary" onclick="goTo(5)" id="q6-next" style="display:none">Final Assessment →</button>
+        <button class="btn btn-secondary btn-sm" onclick="goTo(2)">← Back</button>
+        <button class="btn btn-primary" onclick="goTo(4)" id="q6-next" style="display:none">Final Assessment →</button>
       </div>
     </div>
   </div>
 
-  <!-- MODULE 5: FINAL QUIZ -->
-  <div class="module" id="mod-5">
-    <div class="section-label">Module 5 of 5 — Final Assessment</div>
-    <div class="progress-bar"><div class="progress-fill" style="width:95%"></div></div>
+  <!-- MODULE 4: FINAL QUIZ (was mod-5) -->
+  <div class="module" id="mod-4">
+    <div class="section-label">Module 4 of 4 — Final Assessment</div>
+    <div class="progress-bar"><div class="progress-fill" style="width:90%"></div></div>
 
     <div class="card">
       <div class="card-title">Scenario assessment</div>
@@ -607,22 +476,22 @@
       <div class="options" id="q7-opts">
         <button class="option" onclick="answer('q7',0,false)">"That's actually great timing — we've helped MSPs with similar setups cut their processing costs by 20–30%."</button>
         <button class="option" onclick="answer('q7',1,false)">"I'd recommend pulling your statements so you know what you're paying. You might be surprised."</button>
-        <button class="option" onclick="answer('q7',2,true)">"That's actually the most common thing we hear — most MSPs are paying more than they realize because the fees are spread across a platform bill, a gateway bill, and a processor bill, and none of those statements use the same line items. Before we talk about what you could save, would it be useful to do a free fee audit so you know exactly what you're spending?"</button>
+        <button class="option" onclick="answer('q7',2,true)">"That's actually the most common thing we hear — most MSPs are paying more than they realize because the fees are spread across a platform bill, a gateway bill, and a processor bill. Before we talk about what you could save, would it be useful to do a free fee audit so you know exactly what you're spending?"</button>
         <button class="option" onclick="answer('q7',3,false)">"Let me schedule a demo so you can see the platform first — that usually helps people understand the value before we get into numbers."</button>
       </div>
       <div class="feedback" id="q7-fb"></div>
 
       <div style="background:var(--gray);border-radius:12px;padding:20px;margin:28px 0 24px">
         <div class="section-label">Scenario B</div>
-        <p style="font-size:14px;color:var(--navy);line-height:1.7">The prospect agrees to the audit. Two days later they send you three months of statements: a $350/month ConnectBooster bill, a $180/month BNG Gateway bill, and a Clearent statement showing $4,800 in processing fees on $180,000 in volume. They say: <em>"I thought we just paid the $350."</em></p>
+        <p style="font-size:14px;color:var(--navy);line-height:1.7">You're mid-call and the prospect says: <em>"We're on ConnectBooster. I think it's around $350 a month — pretty cheap. I don't really see the need to look at alternatives."</em></p>
       </div>
 
-      <div class="quiz-q">What is their actual effective rate and what do you say?</div>
+      <div class="quiz-q">How do you respond?</div>
       <div class="options" id="q8-opts">
-        <button class="option" onclick="answer('q8',0,false)">Effective rate: 2.67% (just processing). Say: "Your card rate is 2.67%, which is actually reasonable."</button>
-        <button class="option" onclick="answer('q8',1,true)">Total monthly cost: $5,330. Effective blended rate: ~2.96%. Say: "The $350 is just the platform fee — your total cost including gateway and processing is $5,330 a month, or about 2.96% of your volume. Most MSPs are surprised when they see all three bills combined."</button>
-        <button class="option" onclick="answer('q8',2,false)">Effective rate: 1.94% (total fees / volume). Jump to the AP pricing comparison immediately.</button>
-        <button class="option" onclick="answer('q8',3,false)">Tell them the $350 is fine and focus on the Clearent rate as the only issue.</button>
+        <button class="option" onclick="answer('q8',0,false)">"$350 is a fair price — let me show you what else AP can do beyond cost savings."</button>
+        <button class="option" onclick="answer('q8',1,false)">"ConnectBooster is actually one of the more expensive options on the market. Let me show you our pricing."</button>
+        <button class="option" onclick="answer('q8',2,true)">"That $350 is likely just the ConnectBooster platform fee — most CB users also have a separate BNG Gateway bill and a Clearent processing bill on top of that. Do you receive those separately? The real number is usually higher once you combine all three."</button>
+        <button class="option" onclick="answer('q8',3,false)">"That sounds right for ConnectBooster. Our platform fee is comparable, but we have better integrations."</button>
       </div>
       <div class="feedback" id="q8-fb"></div>
 
@@ -632,8 +501,8 @@
     </div>
   </div>
 
-  <!-- MODULE 6: RESULTS -->
-  <div class="module" id="mod-6">
+  <!-- MODULE 5: RESULTS (was mod-6) -->
+  <div class="module" id="mod-5">
     <div class="card" style="text-align:center">
       <div class="section-label" style="text-align:center;margin-bottom:20px">Training Complete</div>
 
@@ -644,7 +513,7 @@
             stroke-dasharray="326.7" id="scoreCircle" stroke-dashoffset="326.7" stroke-linecap="round"/>
         </svg>
         <div class="score-ring-text">
-          <div class="score-n" id="scoreNum">0/8</div>
+          <div class="score-n" id="scoreNum">0/7</div>
           <div class="score-l">correct</div>
         </div>
       </div>
@@ -662,10 +531,6 @@
           <div class="score-item-l">Script Knowledge</div>
         </div>
         <div class="score-item">
-          <div class="score-item-n" id="sc-audit" style="color:var(--teal)">—</div>
-          <div class="score-item-l">Audit Skills</div>
-        </div>
-        <div class="score-item">
           <div class="score-item-n" id="sc-var" style="color:var(--teal)">—</div>
           <div class="score-item-l">Variations</div>
         </div>
@@ -673,10 +538,11 @@
           <div class="score-item-n" id="sc-final" style="color:var(--teal)">—</div>
           <div class="score-item-l">Final Scenarios</div>
         </div>
-        <div class="score-item">
-          <div class="score-item-n" id="sc-total" style="color:var(--navy)">—</div>
-          <div class="score-item-l">Overall</div>
-        </div>
+      </div>
+
+      <div style="margin-top:12px;background:var(--gray);border-radius:10px;padding:16px">
+        <div class="score-item-n" id="sc-total" style="color:var(--navy);font-size:28px;font-weight:700">—</div>
+        <div class="score-item-l">Overall Score</div>
       </div>
 
       <div id="reviewSection" style="display:none;margin-top:24px;text-align:left">
@@ -687,9 +553,7 @@
 
       <div class="btn-row" style="justify-content:center;margin-top:20px">
         <button class="btn btn-secondary" onclick="restartAll()">Retake Module</button>
-        <a href="AP_Playbook_Objection_Coverage.docx" download style="text-decoration:none">
-          <button class="btn btn-nav">Download Full Playbook</button>
-        </a>
+        <button class="btn btn-nav" onclick="window.open('https://docs.google.com/document/d/11sQGZsj6oFwEw5xcBV_bSg_UOZDCb2P143szs0t4drk/edit','_blank')">Full Playbook →</button>
       </div>
     </div>
   </div>
@@ -697,237 +561,165 @@
 </div>
 
 <script>
-// ─── STATE ─────────────────────────────────────────────────────────────────
-const totalModules = 7; // 0-6
+// ─── STATE ──────────────────────────────────────────────────────────────────
 let currentMod = 0;
-const answers = {}; // q1-q8: bool
-
-const qMap = {
-  q1: { mod: 1, next: 'q1-next' },
-  q2: { mod: 2, next: null },
-  q3: { mod: 2, next: 'q3-next' },
-  q4: { mod: 3, next: 'q4-next' },
-  q5: { mod: 4, next: null },
-  q6: { mod: 4, next: 'q6-next' },
-  q7: { mod: 5, next: null },
-  q8: { mod: 5, next: null },
-};
+const answers = {};
 
 const feedback = {
   q1: {
-    correct: "Correct. Normalizing the objection and pivoting to the fee audit is the move. The savings pitch has no anchor without a baseline.",
-    wrong: "Not quite. Without a baseline, the savings pitch is abstract and loses the prospect. The fee audit is the right pivot — it's low-friction and provides real value."
+    correct: "Correct. Normalizing the objection and pivoting to a baseline-building next step is the move. The savings pitch has no anchor without a baseline — offering clarity first is what earns the follow-up.",
+    wrong: "Not quite. Without a baseline, the savings pitch lands as abstract and loses the prospect. The right move is to normalize the situation and offer to help them understand what they're currently paying — low friction, genuine value, no commitment."
   },
   q2: {
-    correct: "Correct. 'Whether you move forward with us or not' removes all sales pressure from the ask. It signals confidence and tells the prospect there's no catch.",
-    wrong: "Close, but 'whether you move forward with us or not' is the phrase doing the heaviest work. It removes the perceived sales trap from the request."
+    correct: "Correct. 'Whether you move forward with us or not' removes all sales pressure. It signals confidence and tells the prospect there's no catch.",
+    wrong: "Close, but 'whether you move forward with us or not' is doing the heaviest work. It removes the perceived sales trap from the request entirely."
   },
   q3: {
-    correct: "Correct. The audit becomes the next step. Set a clear time to receive the statements and a follow-up to walk through findings together.",
-    wrong: "Wrong move. Pivoting to the demo or pricing page before completing the audit breaks trust. The audit IS the next step — honor it."
-  },
-  q4: {
-    correct: "Correct. ConnectBooster is not an all-in-one processor. The SaaS fee is separate from gateway (BNG) and merchant processing (Clearent) fees. $400 is almost certainly the SaaS fee only.",
-    wrong: "Incorrect. ConnectBooster customers typically receive three separate bills: CB SaaS, BNG Gateway, and Clearent processing. Never accept a single number from a CB prospect without auditing all three."
+    correct: "Correct. The audit is a separate activity — not something done on the call. Set a clear time to receive statements and a follow-up to walk through findings.",
+    wrong: "Wrong move. Pivoting to a demo or pricing page before completing the audit breaks the trust you just built. The audit is the next step — honor it."
   },
   q5: {
-    correct: "Correct. 2.9% is almost always the processor's card rate — not the blended total. Gateway and platform fees on top of that can push the real cost significantly higher.",
-    wrong: "Incorrect. 2.9% is likely just the processor's headline rate. Gateway fees and platform/SaaS fees are separate and often substantial. The 2.9% is not a baseline — it's a partial picture."
+    correct: "Correct. 2.9% is almost always the processor's card rate only. Gateway and platform fees on top of that often push the real blended cost significantly higher.",
+    wrong: "Incorrect. 2.9% is likely just the processor's headline rate. Gateway fees and platform/SaaS fees are separate. The 2.9% is a partial picture, not a baseline."
   },
   q6: {
-    correct: "Correct. The audit creates trust. Pivoting immediately to a pitch after findings breaks that trust. Present the number, let the prospect react, and let them lead the next step.",
-    wrong: "Incorrect. Pivoting directly to a pitch or comparison after the audit undercuts the trust you built. Present findings, let the prospect react, and follow their lead."
+    correct: "Correct. Don't let the prospect disappear into a callback. Keep yourself in the process by offering to handle the legwork, and lock in a specific follow-up now while you have them.",
+    wrong: "Incorrect. Letting the prospect call you back gives away control of the next step. Sending a pricing page or jumping to a demo breaks the trust you just built. The right move is to keep yourself in the loop and book a specific follow-up time now."
   },
   q7: {
-    correct: "Correct. This is the full script: normalize the objection, explain the three-bill structure, and offer the fee audit as the CTA. Clean, low-pressure, and focused on clarity.",
-    wrong: "Incorrect. Opening with the savings pitch (Option A) has no anchor. Sending them to pull statements alone (B) removes you from the process. A demo (D) is the wrong CTA here. The correct move is Option C: normalize, explain the three-bill structure, offer the audit."
+    correct: "Correct. This is the full script: normalize the objection, explain the three-bill structure, and offer the fee audit as the CTA. Clean, low-pressure, focused on clarity.",
+    wrong: "Incorrect. Opening with the savings pitch (A) has no anchor. Sending them to pull statements alone (B) removes you from the process. A demo (D) is the wrong CTA. Option C is the correct move: normalize, explain the three-bill structure, offer the audit."
   },
   q8: {
-    correct: "Correct. Total cost: $4,800 + $180 + $350 = $5,330. Effective rate: $5,330 / $180,000 = 2.96%. The framing 'most MSPs are surprised when they see all three bills combined' is exactly right. Do not pivot to the AP pitch immediately.",
-    wrong: "Incorrect. The correct total is $5,330 ($4,800 processing + $180 gateway + $350 platform). Effective blended rate: 2.96%. Never use just the Clearent rate as the baseline — all three bills count. And do not immediately jump to an AP comparison; present the findings and let the prospect react."
+    correct: "Correct. ConnectBooster is not an all-in-one processor. The SaaS fee is one bill, BNG Gateway is a second, and Clearent processing is a third. Most CB users who think they pay 'one fee' are significantly underestimating their total cost.",
+    wrong: "Incorrect. ConnectBooster customers typically receive three separate bills: the CB SaaS fee, a BNG Gateway bill, and a Clearent processing bill. Never accept a single number from a CB prospect at face value — the real cost is almost always higher once all three are combined."
   }
 };
 
-// ─── NAVIGATION ────────────────────────────────────────────────────────────
+// ─── NAVIGATION ─────────────────────────────────────────────────────────────
 function goTo(n) {
   document.getElementById('mod-' + currentMod).classList.remove('active');
   document.getElementById('mod-' + n).classList.add('active');
   currentMod = n;
   updateNav();
-  window.scrollTo({top: 0, behavior: 'smooth'});
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function updateNav() {
   const container = document.getElementById('navSteps');
   container.innerHTML = '';
-  for (let i = 1; i <= 5; i++) {
+  for (let i = 1; i <= 4; i++) {
     const d = document.createElement('div');
     d.className = 'nav-step' + (i < currentMod ? ' done' : '') + (i === currentMod ? ' active' : '');
     container.appendChild(d);
   }
 }
 
-// ─── QUIZ ──────────────────────────────────────────────────────────────────
+// ─── QUIZ ────────────────────────────────────────────────────────────────────
 function answer(qid, idx, correct) {
   const opts = document.querySelectorAll(`#${qid}-opts .option`);
   opts.forEach((o, i) => {
     o.disabled = true;
     if (i === idx) o.classList.add(correct ? 'correct' : 'wrong');
-    if (!correct && answers[qid] === undefined) {
-      // reveal correct answer
-      const correctIdx = [...opts].findIndex((_, j) => {
-        return [...opts][j].onclick.toString().includes('true');
-      });
-    }
   });
-
-  // reveal correct answer if wrong
   if (!correct) {
     opts.forEach(o => {
-      if (o.onclick.toString().includes(',true)')) o.classList.add('reveal-correct');
+      if (o.onclick && o.onclick.toString().includes(',true)')) o.classList.add('reveal-correct');
     });
   }
 
   answers[qid] = correct;
 
-  // show feedback
   const fb = document.getElementById(`${qid}-fb`);
   fb.classList.add('show', correct ? 'correct-fb' : 'wrong-fb');
   fb.innerHTML = `<div class="feedback-icon">${correct ? '✅' : '❌'}</div><p>${feedback[qid][correct ? 'correct' : 'wrong']}</p>`;
 
-  // show next button
-  const nextBtn = qMap[qid]?.next;
-  if (nextBtn) {
-    setTimeout(() => {
-      document.getElementById(nextBtn).style.display = 'inline-flex';
-    }, 600);
+  // show next buttons
+  if (qid === 'q1') {
+    setTimeout(() => { document.getElementById('q1-next').style.display = 'inline-flex'; }, 600);
   }
-
-  // special: q8 shows final button row
-  if (qid === 'q8' && answers['q7'] !== undefined) {
-    setTimeout(() => {
-      document.getElementById('final-btn-row').style.display = 'flex';
-    }, 600);
-  }
-  if (qid === 'q7' && answers['q8'] !== undefined) {
-    setTimeout(() => {
-      document.getElementById('final-btn-row').style.display = 'flex';
-    }, 600);
-  }
-
-  // q2 + q3: show next after both answered
   if (qid === 'q2' || qid === 'q3') {
     if (answers['q2'] !== undefined && answers['q3'] !== undefined) {
-      setTimeout(() => {
-        document.getElementById('q3-next').style.display = 'inline-flex';
-      }, 600);
+      setTimeout(() => { document.getElementById('q3-next').style.display = 'inline-flex'; }, 600);
     }
   }
-
-  // q5 + q6: show next after both answered
   if (qid === 'q5' || qid === 'q6') {
     if (answers['q5'] !== undefined && answers['q6'] !== undefined) {
-      setTimeout(() => {
-        document.getElementById('q6-next').style.display = 'inline-flex';
-      }, 600);
+      setTimeout(() => { document.getElementById('q6-next').style.display = 'inline-flex'; }, 600);
     }
+  }
+  if ((qid === 'q7' || qid === 'q8') && answers['q7'] !== undefined && answers['q8'] !== undefined) {
+    setTimeout(() => { document.getElementById('final-btn-row').style.display = 'flex'; }, 600);
   }
 }
 
-// ─── RESULTS ───────────────────────────────────────────────────────────────
+// ─── RESULTS ─────────────────────────────────────────────────────────────────
 function showResults() {
-  const qs = ['q1','q2','q3','q4','q5','q6','q7','q8'];
+  const qs = ['q1','q2','q3','q5','q6','q7','q8'];
   let total = 0;
   qs.forEach(q => { if (answers[q]) total++; });
 
-  const pct = total / 8;
+  const pct = total / 7;
   const circumference = 2 * Math.PI * 52;
   const offset = circumference * (1 - pct);
 
-  goTo(6);
+  goTo(5);
   setTimeout(() => {
     document.getElementById('scoreCircle').style.strokeDashoffset = offset;
-    document.getElementById('scoreNum').textContent = `${total}/8`;
-    document.getElementById('sc-root').textContent = answers['q1'] ? '✓' : '✗';
-    document.getElementById('sc-script').textContent = (answers['q2'] && answers['q3']) ? '✓' : (answers['q2'] || answers['q3'] ? '~' : '✗');
-    document.getElementById('sc-audit').textContent = answers['q4'] ? '✓' : '✗';
-    document.getElementById('sc-var').textContent = (answers['q5'] && answers['q6']) ? '✓' : (answers['q5'] || answers['q6'] ? '~' : '✗');
-    document.getElementById('sc-final').textContent = (answers['q7'] && answers['q8']) ? '✓' : (answers['q7'] || answers['q8'] ? '~' : '✗');
-    document.getElementById('sc-total').textContent = `${Math.round(pct*100)}%`;
+    document.getElementById('scoreNum').textContent = `${total}/7`;
 
-    if (total >= 7) {
+    // category scores
+    document.getElementById('sc-root').textContent  = answers['q1'] ? '✓' : '✗';
+    const scriptScore = [answers['q2'], answers['q3']].filter(Boolean).length;
+    document.getElementById('sc-script').textContent = scriptScore === 2 ? '✓' : scriptScore === 1 ? '½' : '✗';
+    const varScore = [answers['q5'], answers['q6']].filter(Boolean).length;
+    document.getElementById('sc-var').textContent    = varScore === 2 ? '✓' : varScore === 1 ? '½' : '✗';
+    const finalScore = [answers['q7'], answers['q8']].filter(Boolean).length;
+    document.getElementById('sc-final').textContent  = finalScore === 2 ? '✓' : finalScore === 1 ? '½' : '✗';
+    document.getElementById('sc-total').textContent  = `${Math.round(pct * 100)}%`;
+
+    if (total >= 6) {
       document.getElementById('scoreMessage').textContent = 'Certified: Fee Objection';
-      document.getElementById('scoreSubMessage').textContent = "You know the script, the audit process, and how to route variations. You're ready to handle this objection on a live call.";
+      document.getElementById('scoreSubMessage').textContent = "You know the script, the pivot, and how to route variations. You're ready to handle this objection on a live call.";
       document.getElementById('scoreCircle').style.stroke = '#00A896';
-    } else if (total >= 5) {
+    } else if (total >= 4) {
       document.getElementById('scoreMessage').textContent = 'Good — a few areas to review';
-      document.getElementById('scoreSubMessage').textContent = "You've got the framework. Review the modules where you missed questions and retake when ready.";
-      document.getElementById('scoreCircle').style.stroke = '#D97706';
+      document.getElementById('scoreSubMessage').textContent = "You've got the framework. Review the modules where you missed questions before your next call.";
       document.getElementById('scoreCircle').style.stroke = '#D97706';
     } else {
       document.getElementById('scoreMessage').textContent = 'Keep practicing';
-      document.getElementById('scoreSubMessage').textContent = "This objection requires precision. Review the script and audit modules carefully and retake.";
+      document.getElementById('scoreSubMessage').textContent = "This objection requires precision. Review the script and variation modules and retake.";
       document.getElementById('scoreCircle').style.stroke = '#DC2626';
-      const missed = qs.filter(q => !answers[q]);
-      const reviewSection = document.getElementById('reviewSection');
-      reviewSection.style.display = 'block';
-      document.getElementById('reviewText').textContent = `Focus on: the three-bill structure, the word-for-word script, and how to calculate blended effective rate from multiple statements.`;
+      document.getElementById('reviewSection').style.display = 'block';
+      document.getElementById('reviewText').textContent = 'Focus areas: the three-bill structure explanation, the word-for-word script, and the correct follow-up after the prospect agrees to the audit.';
     }
   }, 300);
 }
 
-// ─── CALCULATOR ────────────────────────────────────────────────────────────
-function calcFees() {
-  const vol = parseFloat(document.getElementById('calcVolume').value) || 0;
-  const proc = parseFloat(document.getElementById('calcProcessor').value) || 0;
-  const gw = parseFloat(document.getElementById('calcGateway').value) || 0;
-  const plat = parseFloat(document.getElementById('calcPlatform').value) || 0;
-
-  if (vol > 0) {
-    const total = proc + gw + plat;
-    const rate = (total / vol * 100).toFixed(2);
-    document.getElementById('calcRate').textContent = rate + '%';
-    document.getElementById('calcTotal').textContent = '$' + total.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0});
-    document.getElementById('calcAnnual').textContent = '$' + (total * 12).toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0});
-  } else {
-    document.getElementById('calcRate').textContent = '—';
-    document.getElementById('calcTotal').textContent = '—';
-    document.getElementById('calcAnnual').textContent = '—';
-  }
-}
-
-// ─── FLASHCARDS ────────────────────────────────────────────────────────────
+// ─── FLASHCARDS ──────────────────────────────────────────────────────────────
 function flipCard(i) {
-  const card = document.getElementById('fc-' + i);
-  card.classList.toggle('flipped');
+  document.getElementById('fc-' + i).classList.toggle('flipped');
 }
 
-// ─── CHECKLIST ─────────────────────────────────────────────────────────────
-function toggleCheck(el) {
-  el.classList.toggle('checked');
-}
-
-// ─── RESTART ───────────────────────────────────────────────────────────────
+// ─── RESTART ─────────────────────────────────────────────────────────────────
 function restartAll() {
   Object.keys(answers).forEach(k => delete answers[k]);
-  ['q1','q2','q3','q4','q5','q6','q7','q8'].forEach(qid => {
+  ['q1','q2','q3','q5','q6','q7','q8'].forEach(qid => {
     const opts = document.querySelectorAll(`#${qid}-opts .option`);
-    opts.forEach(o => {
-      o.disabled = false;
-      o.classList.remove('correct','wrong','reveal-correct');
-    });
+    opts.forEach(o => { o.disabled = false; o.classList.remove('correct','wrong','reveal-correct'); });
     const fb = document.getElementById(`${qid}-fb`);
     if (fb) { fb.classList.remove('show','correct-fb','wrong-fb'); fb.innerHTML = ''; }
-    const nextMap = { q1: 'q1-next', q3: 'q3-next', q4: 'q4-next', q6: 'q6-next' };
-    if (nextMap[qid]) document.getElementById(nextMap[qid]).style.display = 'none';
+  });
+  ['q1-next','q3-next','q6-next'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = 'none';
   });
   document.getElementById('final-btn-row').style.display = 'none';
-  // unflip cards
   [0,1,2,3].forEach(i => document.getElementById('fc-'+i)?.classList.remove('flipped'));
   goTo(0);
 }
 
-// ─── INIT ──────────────────────────────────────────────────────────────────
+// ─── INIT ────────────────────────────────────────────────────────────────────
 updateNav();
 </script>
 </body>
